@@ -1,0 +1,17 @@
+{
+  "name": "photo-gallery01",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "qcollinscode <qcollins@qraynix.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
