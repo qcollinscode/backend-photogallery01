@@ -23,7 +23,7 @@
         $photo_full_temp_update = mysqli_real_escape_string($connection, $_FILES["photo_full"]["tmp_name"]);
 
         move_uploaded_file($photo_thumbnail_temp_update, "../assets/img/thumbnails/$photo_thumbnail_update" );
-        move_uploaded_file($photo_full_temp_update, "../assets/img/full/$photo_full_update" );
+        move_uploaded_file($photo_full_temp_update, "../assets/img/fulls/$photo_full_update" );
 
         if(empty($photo_thumbnail_update)) {
             $query = "SELECT * FROM photos WHERE photo_id = $photo_id";

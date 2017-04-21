@@ -2,7 +2,7 @@
 
         <!-- Navigation -->
         <?php include "includes/admin_navigation.php" ?>
-
+        <?php header("Location: photos.php"); ?>
 
         <div id="page-wrapper">
 
@@ -13,8 +13,8 @@
                     <div class="col-lg-12">
 
                         <h1 class="page-header">
-                            Welcome to admin
-                            <small>Admin</small>
+                            Welcome to Admin
+                            <small>Visitor</small>
                         </h1>
 
 

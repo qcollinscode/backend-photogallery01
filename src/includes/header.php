@@ -20,7 +20,7 @@
 
 				<!-- Header -->
 					<header id="header">
-						<h1><a href="index.html"><strong>Nexus Hub</strong> by Qraynix</a></h1>
+						<h1><a href="index.html"><strong>Nexus Hub</strong> by Q Collins</a></h1>
 						<nav>
 							<ul>
 								<li><a href="#footer" class="icon fa-info-circle">About</a></li>

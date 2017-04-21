@@ -21,7 +21,7 @@ if(!$all_photos) {
 
 if(isset($_GET['delete'])) {
     $get_photo_id = $_GET['delete'];
-    $query = "DELETE FROM photos WHERE photos_id = {$get_photo_id}";
+    $query = "DELETE FROM photos WHERE photo_id = {$get_photo_id}";
     $delete_photo = mysqli_query($connection, $query);
 
     check_query($delete_photo);

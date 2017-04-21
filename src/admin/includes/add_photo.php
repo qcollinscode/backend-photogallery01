@@ -9,7 +9,7 @@
         $photo_full_temp = mysqli_real_escape_string($connection, $_FILES["photo_full"]["tmp_name"]);
 
         move_uploaded_file($photo_thumbnail_temp, "../assets/img/thumbnails/$photo_thumbnail" );
-        move_uploaded_file($photo_full_temp, "../assets/img/full/$photo_full" );
+        move_uploaded_file($photo_full_temp, "../assets/img/fulls/$photo_full" );
 
         $query = "INSERT INTO photos(photo_title, photo_content, photo_thumbnail, photo_full, photo_tags) ";
         $query .= "VALUES('{$photo_title}','{$photo_content}','{$photo_thumbnail}','{$photo_full}', '{$photo_tags}')";
