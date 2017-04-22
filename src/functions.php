@@ -1,12 +1,12 @@
 <?php
 
 function get_photos() {
-    global $connection;
+    global $db;
     $query = "SELECT * FROM photos";
-    $all_photos = mysqli_query($connection, $query);
+    $all_photos = mysqli_query($db, $query);
 
     if(!$all_photos) {
-        die("Query Failed" . mysqli_error($connection));
+        die("Query Failed" . mysqli_error($db));
     }
 
     while($row = mysqli_fetch_assoc($all_photos)) {
@@ -25,8 +25,8 @@ function get_photos() {
 
 
 function check_query($result) {
-    global $connection;
+    global $db;
     if(!$result) {
-        die("Query Failed: " . mysqli_error($connection));
+        die("Query Failed: " . mysqli_error($db));
     }
 }

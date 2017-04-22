@@ -4,7 +4,7 @@ error_reporting(E_ALL);
 ini_set("display_errors", 1);
 include("file_with_errors.php");
 ?>
-<?php include_once("../includes/db.php"); ?>
+<?php include_once("../includes/connect.php"); ?>
 <?php include_once("functions.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
