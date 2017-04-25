@@ -2,9 +2,6 @@
     <div class="inner split">
         <div>
             <section>
-                <h2>Magna feugiat sed adipiscing</h2>
-                <p>Nulla consequat, ex ut suscipit rutrum, mi dolor tincidunt erat, et scelerisque turpis ipsum eget quis orci mattis aliquet. Maecenas fringilla et ante at lorem et ipsum. Dolor nulla eu bibendum sapien. Donec non pharetra dui. Nulla consequat, ex ut suscipit rutrum, mi dolor tincidunt erat, et scelerisque turpis ipsum.</p>
-            </section>
             <section>
                 <h2>Follow me on ...</h2>
                 <ul class="icons">
@@ -23,18 +20,18 @@
         <div>
             <section>
                 <h2>Get in touch</h2>
-                <form method="post" action="#">
+                <form method="post" action="includes/add_message.php">
                     <div class="field half first">
-                        <input type="text" name="name" id="name" placeholder="Name" />
+                        <input type="text" name="message_name" id="name" placeholder="Name" />
                     </div>
                     <div class="field half">
-                        <input type="text" name="email" id="email" placeholder="Email" />
+                        <input type="text" name="message_email" id="email" placeholder="Email" />
                     </div>
                     <div class="field">
-                        <textarea name="message" id="message" rows="4" placeholder="Message"></textarea>
+                        <textarea name="message_content" id="message" rows="4" placeholder="Message" resize="none"></textarea>
                     </div>
                     <ul class="actions">
-                        <li><input type="submit" name="submit" value="Send" class="special" /></li>
+                        <li><input type="submit" name="send_message" value="Send" class="special" /></li>
                         <li><input type="reset" value="Reset" /></li>
                     </ul>
                 </form>

@@ -36,6 +36,14 @@
                     </li>
                 </ul>
             </li>
+            <li>
+                <a href="javascript:;" data-toggle="collapse" data-target="#messages_dropdown"><i class="fa fa-fw fa-arrows-v"></i> Messages <i class="fa fa-fw fa-caret-down"></i></a>
+                <ul id="messages_dropdown" class="collapse">
+                    <li>
+                        <a href="/admin/messages.php">View All Messages</a>
+                    </li>
+                </ul>
+            </li>
         </ul>
     </div>
 
