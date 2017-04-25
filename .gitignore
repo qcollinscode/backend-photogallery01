@@ -38,3 +38,5 @@ bower_components/
 *.css.map
 build/
 dist/
+
+/vendor/

@@ -1,12 +1,10 @@
 {
-    "name": "qcollins/photo-gallery01",
-    "description": "Photo gallery site",
+    "name": "qcollinscode/photogallery01",
     "authors": [
         {
-            "name": "qcollinscode",
+            "name": "qcollins",
             "email": "qcollins@qraynix.com"
         }
     ],
-    "minimum-stability": "dev",
     "require": {}
 }
