@@ -14,20 +14,20 @@
     }
 
     if(isset($_POST['update_photo'])) {
-        $photo_title_update = mysqli_real_escape_string($db, $_POST["photo_title"]);
-        $photo_tags_update = mysqli_real_escape_string($db, $_POST["photo_tags"]);
-        $photo_content_update = mysqli_real_escape_string($db, $_POST["photo_content"]);
-        $photo_thumbnail_update = mysqli_real_escape_string($db, $_FILES["photo_thumbnail"]["name"]);
-        $photo_thumbnail_temp_update = mysqli_real_escape_string($db, $_FILES["photo_thumbnail"]["tmp_name"]);
-        $photo_full_update = mysqli_real_escape_string($db, $_FILES["photo_full"]["name"]);
-        $photo_full_temp_update = mysqli_real_escape_string($db, $_FILES["photo_full"]["tmp_name"]);
+        $photo_title_update = mysqli_real_escape_string($connection, $_POST["photo_title"]);
+        $photo_tags_update = mysqli_real_escape_string($connection, $_POST["photo_tags"]);
+        $photo_content_update = mysqli_real_escape_string($connection, $_POST["photo_content"]);
+        $photo_thumbnail_update = mysqli_real_escape_string($connection, $_FILES["photo_thumbnail"]["name"]);
+        $photo_thumbnail_temp_update = mysqli_real_escape_string($connection, $_FILES["photo_thumbnail"]["tmp_name"]);
+        $photo_full_update = mysqli_real_escape_string($connection, $_FILES["photo_full"]["name"]);
+        $photo_full_temp_update = mysqli_real_escape_string($connection, $_FILES["photo_full"]["tmp_name"]);
 
         move_uploaded_file($photo_thumbnail_temp_update, "../assets/img/thumbnails/$photo_thumbnail_update" );
         move_uploaded_file($photo_full_temp_update, "../assets/img/fulls/$photo_full_update" );
 
         if(empty($photo_thumbnail_update)) {
             $query = "SELECT * FROM photos WHERE photo_id = $photo_id";
-            $select_image = mysqli_query($db, $query);
+            $select_image = mysqli_query($connection, $query);
             while($row = mysqli_fetch_assoc($select_image)) {
                 $photo_thumbnail_update = $row["photo_thumbnail"];
             }
@@ -35,7 +35,7 @@
 
         if(empty($photo_full_update)) {
             $query = "SELECT * FROM photos WHERE photo_id = $photo_id";
-            $select_image = mysqli_query($db, $query);
+            $select_image = mysqli_query($connection, $query);
             while($row = mysqli_fetch_assoc($select_image)) {
                 $photo_full_update = $row["photo_full"];
             }
@@ -49,7 +49,7 @@
         $query .= "photo_full = '$photo_full_update' ";
         $query .= "WHERE photo_id = $photo_id";
 
-        $update_photo = mysqli_query($db, $query);
+        $update_photo = mysqli_query($connection, $query);
 
         check_query($update_photo);
 
@@ -69,7 +69,7 @@
 
     <div class="form-group">
         <label for="current_full_image">Current Full Image</label>
-        <img name="current_full_image" src='../assets/img/fulls/<?php echo "{$photo_full}"; ?>' class="img-responsive" width="100" alt="">
+        <img name="current_full_image" src='../assets/img/full/<?php echo "{$photo_full}"; ?>' class="img-responsive" width="100" alt="">
     </div>
 
     <div class="form-group">

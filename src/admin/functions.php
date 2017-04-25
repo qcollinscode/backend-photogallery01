@@ -1,16 +1,16 @@
 <?php
 
 function check_query($result) {
-    global $db;
+    global $connection;
     if(!$result) {
-        die("Query Failed: " . mysqli_error($db));
+        die("Query Failed: " . mysqli_error($connection));
     }
 }
 
 function getById($str, $id) {
-    global $db;
+    global $connection;
     $query = "SELECT * FROM {$str} WHERE photo_id = {$id}";
-    $result = mysqli_query($db, $query);
+    $result = mysqli_query($connection, $query);
     check_query($result);
     return $result;
 }

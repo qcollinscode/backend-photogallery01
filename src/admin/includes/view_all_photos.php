@@ -13,16 +13,16 @@
 <?php
 
 $query = "SELECT * FROM photos";
-$all_photos = mysqli_query($db, $query);
+$all_photos = mysqli_query($connection, $query);
 
 if(!$all_photos) {
-    die("Query Failed" . mysqli_error($db));
+    die("Query Failed" . mysqli_error($connection));
 }
 
 if(isset($_GET['delete'])) {
     $get_photo_id = $_GET['delete'];
     $query = "DELETE FROM photos WHERE photo_id = {$get_photo_id}";
-    $delete_photo = mysqli_query($db, $query);
+    $delete_photo = mysqli_query($connection, $query);
 
     check_query($delete_photo);
     header("Location: photos.php");
