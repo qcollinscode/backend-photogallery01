@@ -30,7 +30,7 @@ if(isset($_GET['delete'])) {
 
 while($row = mysqli_fetch_assoc($all_messages)) {
     $message_id = $row['message_id'];
-    $message_name = $row['name'];
+    $message_name = $row['message_name'];
     $message_date = $row['message_date'];
     $message_email = $row['message_email'];
     $message_content = $row['message_content'];
